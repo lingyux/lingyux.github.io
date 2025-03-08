@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>影音</title>
+    <link href="/2025/03/08/%E5%BD%B1%E9%9F%B3/"/>
+    <url>/2025/03/08/%E5%BD%B1%E9%9F%B3/</url>
+    
+    <content type="html"><![CDATA[<h1 id="媒体库"><a href="#媒体库" class="headerlink" title="媒体库"></a>媒体库</h1><h2 id="为什么要建自己的媒体库"><a href="#为什么要建自己的媒体库" class="headerlink" title="为什么要建自己的媒体库"></a>为什么要建自己的媒体库</h2><ol><li>为什么不使用爱奇艺，腾讯视频等流媒体？为什么不使用盗版的在线平台？<ul><li>码率低。</li><li>删减问题。</li><li>限制使用人数。</li><li>资源质量差(屎里淘金)。</li><li>周末在家闲着没事？🤓👆折腾一下。</li></ul></li><li>直接下载到网盘或者硬盘不就好了，为什么要多此一举？<ul><li>分享不便。</li><li>没有元数据。</li><li>无法同步观看记录。</li><li>多用户无法做到观看记录分离。</li></ul></li></ol><h2 id="CloudDrive2"><a href="#CloudDrive2" class="headerlink" title="CloudDrive2"></a>CloudDrive2</h2><p>CloudDrive2 是一个云存储管理平台，可以多个网盘服务挂载为本地磁盘，从而方便地访问和管理云文件。</p><ol><li><strong>多网盘支持</strong>：<ul><li>CloudDrive2 支持多种网盘服务，包括阿里云盘， Google Drive、OneDrive、Dropbox 等国内外网盘服务商，用户可以将这些网盘挂载为本地磁盘，统一管理。</li></ul></li><li><strong>大容量影音库</strong>：<ul><li>通过将网盘挂载到设备上，用户可以创建大容量的影音库，方便存储和播放大量的影音文件。</li></ul></li></ol><h2 id="Emby"><a href="#Emby" class="headerlink" title="Emby"></a>Emby</h2><ol><li><strong>媒体管理</strong>：<ul><li>Emby可以集中管理电影、电视剧、音乐、照片等各种媒体资源。自动刮削元数据，下载封面图和描述信息。</li></ul></li><li><strong>跨平台支持</strong>：<ul><li>Emby支持多平台，包括Windows、Mac、Linux、Android、iOS， TVOS等。</li></ul></li><li><strong>用户管理</strong>：<ul><li>Emby可以创建多个用户账户，并为每个账户设置不同的访问权限，每个人都可以拥有自己的观看记录。</li></ul></li><li><strong>实时转码</strong>：<ul><li>Emby支持实时转码，可以根据设备和网络状况自动调整视频质量，确保流畅播放。</li></ul></li><li><strong>插件扩展</strong>：<ul><li>Emby拥有丰富的插件库，可以根据需要安装各种插件，扩展Emby的功能，如字幕下载、媒体同步等。</li></ul></li><li><strong>远程访问</strong>：<ul><li>通过Emby，您可以在任何有网络连接的地方访问媒体库。它支持内网穿透和远程访问，可以随时随地享受影音内容。</li></ul></li></ol><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol><li><strong>安装CloudDrive2</strong></li><li><strong>安装Emby</strong></li><li><strong>配置CloudDrive2与Emby</strong>：<ul><li>在CloudDrive2中，将网盘挂载为本地磁盘（如F:、G:等）。</li><li>打开Emby服务器的管理界面，选择“媒体库”选项。</li><li>点击“添加媒体库”，选择媒体类型（如电影、电视剧等），然后选择挂载的本地磁盘路径。</li></ul></li><li><strong>媒体刮削和管理</strong>：<ul><li>Emby会自动扫描并刮削媒体文件，下载相关的元数据和封面图。</li><li>在Emby的管理界面中对媒体库进行分类和管理。</li><li>手动修改刮削错误的媒体信息</li></ul></li><li><strong>播放和访问</strong>：<ul><li>在任何支持Emby客户端的设备上（如智能电视、手机、平板等）安装Emby客户端应用。</li><li>登录Emby账户，访问并播放个人影音库。<blockquote><p>文件名格式：少女乐队的呐喊(2024)&#x2F;少女乐队的呐喊S01E01.mp4</p></blockquote></li></ul></li></ol><h2 id="播放器"><a href="#播放器" class="headerlink" title="播放器"></a>播放器</h2><p>播放器的选择很多，IOS的SenPlayer，Infuse，Fileball等，Android的AfuseKt，Hills等，但高级功能都需要付费。Emby也有自己的官方移动app，但需要付费而且体验不好。如果不添加别人搭建的大型emby服务器的话，个人使用一般不用担心版权问题，所以推荐网易出品的播放器。</p><p><strong>网易爆米花</strong>是一款由网易开发的智能媒体库和全能播放器。它具有以下主要功能：</p><ol><li>智能媒体库：<ul><li>支持聚合电影、电视剧、综艺等多种影视资源，自动识别影片信息，匹配海报、评分和简介。</li><li>可以将阿里云盘、百度网盘、天翼云盘等多个网盘的内容聚合到一个媒体库中，方便管理。</li></ul></li><li>全能播放器：<ul><li>支持超过200种音视频格式和字幕编码，无需下载即可流畅播放4K、HDR等超清视频。</li><li>支持跨平台同步，用户可以在手机、电视、平板、电脑等多终端无缝观看。</li></ul></li><li>无广告体验：<ul><li>网易爆米花致力于提供纯粹的视听体验，没有广告打扰，用户可以专注于观影。</li></ul></li><li>多协议支持：<ul><li>支持WebDAV、SMB协议，方便用户导入本地目录和网盘中的影片。</li></ul></li><li>支持全平台。</li></ol><h1 id="Ani"><a href="#Ani" class="headerlink" title="Ani"></a>Ani</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Ani 是一款开源的跨平台弹幕追番应用，专为动漫爱好者设计。以下是它的一些主要特点：</p><ol><li><strong>多平台支持</strong>：Ani 支持 Android 和桌面系统（Windows 和 macOS），通过 Kotlin 多平台架构和 Compose UI 框架实现。</li><li><strong>多数据源整合</strong>：支持多个视频数据源和弹幕服务，包括 BT 和在线资源，自动整合资源，提供高质量和快速缓冲的观看体验。</li><li><strong>云同步</strong>：支持 Bangumi 收藏同步，记录观看进度，方便用户随时随地继续观看。</li><li><strong>弹幕功能</strong>：内置弹幕引擎，支持自定义弹幕样式和速度，并提供公益弹幕服务器。</li><li><strong>离线缓存</strong>：根据用户的资源偏好设置自动缓存下一集，方便离线观看。</li><li><strong>开源免费</strong></li></ol><p><strong>References</strong></p><blockquote><p><a href="https://github.com/open-ani/animeko">open-ani&#x2F;animeko: 集找番、追番、看番的一站式弹幕追番平台</a></p></blockquote>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>去广告</title>
+    <link href="/2025/03/08/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
+    <url>/2025/03/08/%E5%8E%BB%E5%B9%BF%E5%91%8A/</url>
+    
+    <content type="html"><![CDATA[<h1 id="去广告"><a href="#去广告" class="headerlink" title="去广告"></a>去广告</h1><p>受不了各大应用的开屏广告？</p><h2 id="李跳跳-Android"><a href="#李跳跳-Android" class="headerlink" title="李跳跳(Android)"></a>李跳跳(Android)</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>李跳跳是一款安卓软件，专门用于跳过应用程序的开屏广告。</p><ol><li><strong>范围广</strong></li><li><strong>精确高</strong></li><li><strong>不联网</strong></li><li><strong>一键开启</strong></li></ol><p>由于某互联网大厂的律师函警告，李跳跳现已停止更新，但规则仍在持续更新，所以软件依然可以正常使用。</p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ol><li>安装后打开软件，如果未开启无障碍服务，会弹窗提示，点击“OK”进入无障碍页面，选择已下载的应用并开启无障碍服务。</li><li>点击“更多”，选择右上角的三个点，选择“导入规则”。</li><li>使用系统的粘贴功能粘贴规则文件，确保格式正确，导入成功后会提示成功导入的规则条数。</li></ol><p>References</p><blockquote><ol><li><a href="http://ad-litiaotiao.com/">李跳跳 - 2024年安卓跳广告神器软件和规则下载</a></li><li><a href="https://github.com/rongzhiy/LiTiaotiao">GitHub - rongzhiy&#x2F;LiTiaotiao: 李跳跳软件及使用指南</a></li></ol></blockquote><h3 id="平替"><a href="#平替" class="headerlink" title="平替"></a>平替</h3><blockquote><p><a href="https://github.com/gkd-kit/gkd">GitHub - gkd-kit&#x2F;gkd: 基于无障碍，高级选择器，订阅规则的自定义屏幕点击 Android 应用</a></p></blockquote><h2 id="loon-IOS"><a href="#loon-IOS" class="headerlink" title="loon(IOS)"></a>loon(IOS)</h2><p>loon本质上是一个代理软件，但可以利用它的功能实现应用去广告。需要注意的是loon是一个付费软件，日区的价格是900日元。</p><h3 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h3><p><a href="https://github.com/luestr/ProxyResource">参考 - 可莉的Loon资源库 | 插件 | 脚本 | 规则</a></p><h2 id="Safari-IOS"><a href="#Safari-IOS" class="headerlink" title="Safari(IOS)"></a>Safari(IOS)</h2><p>如果是苹果用户，最推荐使用的浏览器就是自带的Safari。很多人不知道的是，Safari是可以像PC端的浏览器那样安装插件的，所以ADGuard、ADBlock等广告拦截插件是可以在手机上使用的。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>密码管理</title>
+    <link href="/2025/03/08/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86/"/>
+    <url>/2025/03/08/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86/</url>
+    
+    <content type="html"><![CDATA[<h1 id="密码管理软件"><a href="#密码管理软件" class="headerlink" title="密码管理软件"></a>密码管理软件</h1><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>每次登录各种网站都需要忘记密码？手机上记住的密码在其他设备上不能使用？手写密码太麻烦，明码记载不安全？每次都需要手动输入？</p><h2 id="软件要求"><a href="#软件要求" class="headerlink" title="软件要求"></a>软件要求</h2><ol><li><strong>自动记录密码</strong>：软件需要在第一次登录某个网站或设备时记住登录凭据。</li><li><strong>跨平台支持</strong>：提供多种客户端应用程序，包括浏览器扩展、移动端、桌面端等。</li><li><strong>端到端加密</strong>：需要提供密码加密功能，确保只有本人能够访问自己的数据。</li><li><strong>自动填充</strong>：自动填充网站和应用程序中的登录信息，简化密码输入过程。</li></ol><h2 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h2><p>按照数据存储位置分类：  </p><ol><li>厂商的提供云服务<ul><li>1Password</li><li>LastPass</li><li>Bitwarden</li><li>ProtonPass</li><li>NordPass</li><li>DashLane</li></ul></li><li>存储在本地，用户可以自己选择同步方式包括Nas，网盘等。<ul><li>KeePass系列软件</li><li>Enpass</li><li>Bitwarden</li></ul></li></ol><h2 id="Bitwarden"><a href="#Bitwarden" class="headerlink" title="Bitwarden"></a>Bitwarden</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ol><li><strong>自建服务器</strong>：用户可以选择自行搭建Bitwarden服务器，进一步控制数据存储和安全。</li><li><strong>开源和透明</strong>：Bitwarden是开源软件，代码公开，用户可以查看和验证其安全性。</li></ol><h3 id="为什么推荐Bitwarden"><a href="#为什么推荐Bitwarden" class="headerlink" title="为什么推荐Bitwarden"></a>为什么推荐Bitwarden</h3><ol><li><strong>贵</strong>：1Password个人版每年约36美元，DashLane每年49美元。</li><li><strong>安全问题</strong>：LastPass曾发生过安全事件。</li><li><strong>数据同步不便</strong>：大部分的密码管理软件的服务器都位于国外，国内访问不便。</li><li><strong>免费用户缺少必要功能</strong>：Enpass免费用户移动端只能保存25个密码。LastPass免费版只支持一个设备。1Password不提供免费功能。</li><li><strong>颜值问题</strong>：好看对于一个软件来说也是非常重要的事。</li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
