@@ -1,0 +1,686 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lingyux">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Google NotebookLM是一款具有代表性的AI工具，它在当前大型语言模型（LLM）的应用格局中占据着独特的地位，是**“接地气”AI（Grounded AI）方法的典型代表，专注于帮助用户理解、分析和综合现有信息**。它标志着LLM应用从过去追求通用型聊天机器人，向更专业化、高保真度的企业工具的转变。 产品定位与核心理念NotebookLM被定位为用户的**“AI思考伙伴”和AI驱动的研">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件分享">
+<meta property="og:url" content="https://lingyux.github.io/2025/08/16/NotebookLM/index.html">
+<meta property="og:site_name" content="软件分享">
+<meta property="og:description" content="Google NotebookLM是一款具有代表性的AI工具，它在当前大型语言模型（LLM）的应用格局中占据着独特的地位，是**“接地气”AI（Grounded AI）方法的典型代表，专注于帮助用户理解、分析和综合现有信息**。它标志着LLM应用从过去追求通用型聊天机器人，向更专业化、高保真度的企业工具的转变。 产品定位与核心理念NotebookLM被定位为用户的**“AI思考伙伴”和AI驱动的研">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-16T06:49:05.217Z">
+<meta property="article:modified_time" content="2025-08-16T06:49:05.230Z">
+<meta property="article:author" content="lingyux">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>软件分享</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"lingyux.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>软件分享</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/LLM%E5%BA%94%E7%94%A8.html" target="_self">
+                <i class="iconfont icon-file-text-fill"></i>
+                <span>LLM应用</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-08-16 14:49" pubdate>
+          2025年8月16日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          14 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header"></h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p><strong>Google NotebookLM</strong>是一款具有代表性的AI工具，它在当前大型语言模型（LLM）的应用格局中占据着独特的地位，是**“接地气”AI（Grounded AI）方法<strong>的典型代表，专注于帮助用户</strong>理解、分析和综合现有信息**。它标志着LLM应用从过去追求通用型聊天机器人，向<strong>更专业化、高保真度的企业工具</strong>的转变。</p>
+<h3 id="产品定位与核心理念"><a href="#产品定位与核心理念" class="headerlink" title="产品定位与核心理念"></a><strong>产品定位与核心理念</strong></h3><p>NotebookLM被定位为用户的**“AI思考伙伴”<strong>和</strong>AI驱动的研究和笔记工具**。它的核心理念是<strong>不从广阔的互联网上生成新颖内容</strong>，而是<strong>完全基于用户提供的可信来源来回答问题</strong>，从而<strong>极大减少模型产生“幻觉”的风险</strong>，并提供<strong>可验证、可引用的答案</strong>。它旨在将静态信息转化为动态的认知伙伴。</p>
+<h3 id="底层技术：检索增强生成（RAG）与Gemini-1-5-Pro"><a href="#底层技术：检索增强生成（RAG）与Gemini-1-5-Pro" class="headerlink" title="底层技术：检索增强生成（RAG）与Gemini 1.5 Pro"></a><strong>底层技术：检索增强生成（RAG）与Gemini 1.5 Pro</strong></h3><p>NotebookLM的强大功能和可靠性源于其核心技术架构：</p>
+<ul>
+<li><strong>检索增强生成（RAG）</strong>：NotebookLM明确地构建在RAG架构之上。这意味着当用户提问时，它会首先从用户上传的文档中<strong>检索</strong>最相关的内容，然后<strong>仅基于</strong>这些检索到的信息来<strong>生成</strong>一个综合性的答案。这种**“来源锚定”（source-grounding）<strong>是其决定性特征，确保回答与源材料相关且准确，并具有</strong>可追溯性**。</li>
+<li><strong>Gemini 1.5 Pro引擎</strong>：其生成组件由谷歌最先进的模型之一——<strong>Gemini 1.5 Pro</strong>驱动，确保了复杂的语言理解和生成能力。</li>
+</ul>
+<h3 id="核心功能"><a href="#核心功能" class="headerlink" title="核心功能"></a><strong>核心功能</strong></h3><p>NotebookLM提供了一系列强大的功能，旨在将信息转化为可操作的知识：</p>
+<ul>
+<li><strong>智能文档分析与多格式来源摄取</strong>：<ul>
+<li>支持上传多种格式文档，包括<strong>PDF、Google Docs、文本文件、网页链接，甚至YouTube视频和音频文件</strong>。</li>
+<li>自动提取关键信息和主题，生成文档摘要和要点。</li>
+</ul>
+</li>
+<li><strong>交互式问答与可验证的内联引用</strong>：<ul>
+<li>基于上传资料提供<strong>精准问答</strong>，每个AI生成的回答都包含<strong>带编号的引用</strong>，直接链接回源材料中的确切段落。</li>
+<li>支持深度追问和探索，直接解决了第一代LLM的“幻觉”问题，建立了用户的信任。</li>
+</ul>
+</li>
+<li><strong>内容生成与创新输出格式</strong>：<ul>
+<li>根据资料生成学习指南、FAQ（常见问题解答）、时间线、简报文件等多种格式的文档。</li>
+<li><strong>音频概览（Audio Overviews）</strong>：将文档转换为播客式对话，由两位AI主持人自然对话，方便听觉型学习者或在通勤、运动时快速了解密集材料的概况。用户甚至可以自定义音频的长度.</li>
+<li><strong>视频概览（Video Overviews）</strong>：一项较新的功能，可以从来源中提取相关的图片、图表和引文，创建一个带旁白的幻灯片演示文稿.</li>
+<li><strong>思维导图（Mind Maps）</strong>：生成一张可视化的思维导图，展示源文档中各个关键主题及其相互之间的联系.</li>
+</ul>
+</li>
+<li><strong>视频分析</strong>：接收YouTube URL，自动转录视频内容，允许用户查询视频内容、获取带时间戳的摘要，并将视频见解与文本关联.</li>
+</ul>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a><strong>应用场景</strong></h3><p>NotebookLM在广泛的场景中发挥作用，尤其适合需要处理大量现有信息的任务：</p>
+<ul>
+<li><strong>学术研究</strong>：文献综述、论文准备.</li>
+<li><strong>商业分析</strong>：市场报告、竞品分析.</li>
+<li><strong>个人学习与知识整理</strong>：考试准备、构建个人知识库，例如创建关于某个技术主题的笔记本，集中管理所有资料，长期积累形成专属知识库.</li>
+<li><strong>内容创作与再利用</strong>：素材整理、创意激发，将网络研讨会文字记录和博客文章转化为FAQ页面或社交媒体话题.</li>
+<li><strong>会议与演示准备</strong>：快速创建简报或演示大纲.</li>
+<li><strong>快速入职与培训</strong>：新员工可以使用NotebookLM作为个人向导，提出具体问题，而无需阅读数百页的公司政策手册和培训指南.</li>
+<li><strong>项目管理</strong>：创建关键决策时间线和识别行动项.</li>
+</ul>
+<h3 id="优势特点"><a href="#优势特点" class="headerlink" title="优势特点"></a><strong>优势特点</strong></h3><ul>
+<li><strong>信息源可控</strong>：仅基于用户上传的资料进行处理，极大地减少了“幻觉”风险。</li>
+<li><strong>隐私保护</strong>：用户数据不用于模型训练。</li>
+<li><strong>免费使用</strong>：目前对个人账户免费（功能有限制），进阶功能可能需订阅Google One AI Premium。</li>
+<li><strong>易于分享</strong>：支持笔记本共享协作.</li>
+<li><strong>界面简洁，交互以对话方式呈现，运行流畅</strong>.</li>
+<li>支持<strong>多语种内容转换</strong>，例如将中文资料生成英文播客，或反之，实现内容的跨语言利用.</li>
+</ul>
+<h3 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a><strong>局限性</strong></h3><p>尽管功能强大，NotebookLM也存在一些局限：</p>
+<ul>
+<li>主要用于<strong>综合现有信息</strong>，而非从零开始创造.</li>
+<li>解释的深度有时不及Claude.</li>
+<li>目前对用户定制交互有限.</li>
+<li>早期可能只支持英文播客生成（但预计未来将支持中文版和更多自定义）.</li>
+<li>目前主要依赖Google生态，尚无广泛的第三方平台集成.</li>
+</ul>
+<h3 id="在LLM关键技术趋势中的地位"><a href="#在LLM关键技术趋势中的地位" class="headerlink" title="在LLM关键技术趋势中的地位"></a><strong>在LLM关键技术趋势中的地位</strong></h3><p>NotebookLM是**“接地气”必要性<strong>这一关键技术趋势的</strong>典范**。它通过RAG技术，直面并解决了早期LLM在企业应用中最大的障碍——<strong>不可靠性和幻觉问题</strong>。它的设计理念将<strong>信任和激活</strong>置于纯粹的生成式新颖性之上，旨在<strong>激活那些沉睡在文档、视频和音频文件中的现有信息的价值</strong>，将惰性的、非结构化的机构知识转变为一个交互式的、可查询的、可信赖的资产。</p>
+<p>NotebookLM与<strong>Claude Code</strong>等工具并非直接竞争对手，而是<strong>互补</strong>的。NotebookLM专注于<strong>知识的综合与理解</strong>（一种“读取”操作），而Claude Code则专注于<strong>代理式的创造与行动</strong>（一种“写入”操作）。这种<strong>战略分化</strong>是LLM市场发展的重要标志，企业需要构建一个**“AI工具箱”<strong>，根据任务保真度要求选择合适的工具。NotebookLM是解决企业中</strong>“信息过载与综合差距”**痛点的理想选择。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>https://lingyux.github.io/2025/08/16/NotebookLM/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lingyux</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年8月16日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/08/16/Claude%20Code/" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/08/16/RAG/" title="">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

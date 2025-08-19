@@ -1,0 +1,674 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lingyux">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="大型语言模型（LLM）在知识管理与研究领域的应用，是其从通用对话工具向专业化、企业级应用演进的重要方向之一。LLM正在成为访问企业内部非结构化数据的通用接口，将静态的知识库转变为动态的、可对话的智能引擎，从而彻底改变了信息获取、分析和综合的方式。 LLM在知识管理与研究方面的核心应用方向包括：  信息处理：LLM能够进行文献综述与研究总结，从海量数据中进行分析并提取洞察，以及构建知识图谱。例如，市">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件分享">
+<meta property="og:url" content="https://lingyux.github.io/2025/08/16/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%B8%8E%E7%A0%94%E7%A9%B6/index.html">
+<meta property="og:site_name" content="软件分享">
+<meta property="og:description" content="大型语言模型（LLM）在知识管理与研究领域的应用，是其从通用对话工具向专业化、企业级应用演进的重要方向之一。LLM正在成为访问企业内部非结构化数据的通用接口，将静态的知识库转变为动态的、可对话的智能引擎，从而彻底改变了信息获取、分析和综合的方式。 LLM在知识管理与研究方面的核心应用方向包括：  信息处理：LLM能够进行文献综述与研究总结，从海量数据中进行分析并提取洞察，以及构建知识图谱。例如，市">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-16T01:49:54.641Z">
+<meta property="article:modified_time" content="2025-08-16T01:49:54.659Z">
+<meta property="article:author" content="lingyux">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>软件分享</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"lingyux.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>软件分享</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/LLM%E5%BA%94%E7%94%A8.html" target="_self">
+                <i class="iconfont icon-file-text-fill"></i>
+                <span>LLM应用</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-08-16 09:49" pubdate>
+          2025年8月16日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          15 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header"></h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>大型语言模型（LLM）在<strong>知识管理与研究</strong>领域的应用，是其从通用对话工具向专业化、企业级应用演进的重要方向之一。LLM正在成为访问企业内部非结构化数据的通用接口，将静态的知识库转变为动态的、可对话的智能引擎，从而彻底改变了信息获取、分析和综合的方式。</p>
+<p><strong>LLM在知识管理与研究方面的核心应用方向包括：</strong></p>
+<ul>
+<li><strong>信息处理</strong>：LLM能够进行文献综述与研究总结，从海量数据中进行分析并提取洞察，以及构建知识图谱。例如，市场分析师可以分析数千次客户互动中的情绪，监控竞争对手的产品变更，追踪法规变化，并汇总市场研究报告。</li>
+<li><strong>智能问答系统</strong>：LLM能够基于企业内部文档（如技术手册、人力资源政策、项目历史记录）建立私有知识问答系统，员工可以通过自然语言提问并获得精确、基于上下文的答案，从而提高工作效率和知识共享水平。</li>
+<li><strong>学习辅助</strong>：LLM可以作为个性化学习助手，提供概念解释与答疑，并生成各种学习材料，如摘要和测验。例如，NotebookLM等工具能将多种学习资料整理成专题笔记，构建个人知识库，并生成多语种学习内容。</li>
+<li><strong>高级数据与情感分析</strong>：LLM能够解析和分析海量的非结构化文本，如客户评论、社交媒体帖子和市场报告，以识别趋势、评估客户情绪，并提供战略性的商业洞察。它们通过自然语言处理（NLP）算法从文本数据中提取有意义的模式和主题，并将复杂信息转换为词云、散点图或网络图等可视化形式。</li>
+<li><strong>科学研究</strong>：LLM正在演变为“科学智能体”，能够自动化从假设生成、实验设计到数据分析和模拟等关键任务，从而加速科学发现的进程。</li>
+</ul>
+<p><strong>推动这些应用发展的关键技术趋势：</strong></p>
+<ul>
+<li><strong>“接地气AI”（Grounded AI）与检索增强生成（RAG）</strong>：这是知识管理应用的核心。早期的LLM在企业应用中最大的障碍是其不可靠性（即产生“幻觉”——生成不正确或捏造的信息）。<strong>RAG技术</strong>通过从用户提供的可信外部知识库中检索信息来增强和证实LLM的回答，从而极大地减少了幻觉的风险，并提供可验证、可引用的答案。未来的模型将默认包含引用和出处，极大提升AI输出的透明度和可信度。</li>
+<li><strong>多模态能力</strong>：LLM不再局限于文本，能够处理文本、图像、音频甚至视频的组合。这使得工具能够从更多样化的信息源中提取和综合知识。</li>
+<li><strong>向更小、领域专用模型的战略转移</strong>：虽然知识管理工具可以是通用型的，但为特定领域微调的模型能够提供更高的准确性和更少的错误。</li>
+</ul>
+<p><strong>Google NotebookLM：知识管理与研究的代表性工具</strong></p>
+<p>NotebookLM是谷歌推出的一款AI驱动的研究和笔记工具，被定位为用户的“AI思考伙伴”。它代表了从通用型聊天机器人向“接地气AI”的根本性转变。</p>
+<ul>
+<li><strong>核心理念</strong>：NotebookLM的设计目的不是从广阔的互联网上生成新颖内容，而是<strong>完全基于用户提供的可信来源</strong>来回答问题，帮助用户理解、分析和综合他们 <em>已经拥有</em> 的特定信息。它旨在将静态信息转化为动态的认知伙伴。</li>
+<li><strong>底层技术</strong>：NotebookLM明确构建在<strong>RAG架构</strong>之上，并由谷歌先进的<strong>Gemini 1.5 Pro模型</strong>驱动。RAG确保其所有回答都与源材料相关且准确，并具有可追溯性，因为每个答案都附有引用，直接链接到源文档中的确切段落。这直接解决了第一代LLM的“幻觉”问题，从而建立了用户的信任。</li>
+<li><strong>核心功能</strong>：<ul>
+<li><strong>智能文档分析与多格式来源摄取</strong>：支持上传PDF、Google Docs、文本文件、网页链接，甚至YouTube视频和音频文件。它能自动提取关键信息和主题，生成文档摘要和要点。</li>
+<li><strong>交互式问答与可验证的内联引用</strong>：基于上传资料提供精准问答，每个AI生成的回答都包含带编号的引用，直接链接回源材料中的确切段落。</li>
+<li><strong>内容生成与创新输出格式</strong>：能够根据资料生成学习指南、FAQ（常见问题解答）、时间线、简报文件、思维导图等。<ul>
+<li><strong>音频概览（Audio Overviews）</strong>：将文档转换为播客式对话，由两位AI主持人自然对话，方便用户在通勤或运动时学习。</li>
+<li><strong>视频概览（Video Overviews）</strong>：从来源中提取相关图片、图表和引文，创建一个带旁白的幻灯片演示文稿。</li>
+<li><strong>视频分析</strong>：接收YouTube URL，自动转录视频内容，允许用户查询视频内容、获取带时间戳的摘要，并将视频见解与文本关联。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>典型应用场景</strong>：<ul>
+<li><strong>学术研究</strong>：进行文献综述、论文准备。</li>
+<li><strong>商业分析</strong>：分析市场报告、竞品分析，快速综合趋势。</li>
+<li><strong>个人学习</strong>：考试准备、知识整理，构建个人知识库，例如围绕某个技术主题集中管理所有资料。</li>
+<li><strong>会议与演示准备</strong>：上传会议纪要、报告、竞品分析等，生成简报或演示大纲。</li>
+<li><strong>快速入职与培训</strong>：新员工可以与包含公司政策和培训材料的笔记本互动，获得即时、有来源依据的回答。</li>
+</ul>
+</li>
+<li><strong>优势特点</strong>：信息源可控（显著减少幻觉），数据不用于模型训练（隐私保护），目前对个人账户免费（有限制），支持笔记本共享协作，界面简洁，交互以对话方式呈现，运行流畅。</li>
+<li><strong>潜在劣势</strong>：主要用于综合现有信息，而非从零开始创造；解释的深度有时不及Claude；目前对用户定制交互有限。</li>
+</ul>
+<p><strong>总结</strong></p>
+<p>LLM在知识管理与研究领域的应用正朝着专业化、高保真度的方向发展。NotebookLM等工具通过其“接地气”的设计理念（基于用户提供的可信来源）和强大的RAG技术，成功解决了早期LLM的信任和幻觉问题，使其成为企业将非结构化机构知识转化为可信、可查询资产的战略工具。未来，企业需要构建一个战略性的“AI工具箱”，选择专业化、有事实依据的智能体工具来解决任务关键型、高准确度的工作流程，从而向“AI原生企业”转型。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>https://lingyux.github.io/2025/08/16/知识管理与研究/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lingyux</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年8月16日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/08/16/%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%E5%BA%94%E7%94%A8/" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/08/16/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C%E4%B8%8E%E7%BC%96%E8%BE%91/" title="">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
